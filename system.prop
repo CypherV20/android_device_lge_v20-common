@@ -133,9 +133,6 @@ persist.radio.start_ota_daemon=1
 ro.ril.telephony.mqanelements=5
 ro.telephony.ril_class=LgeLteRIL
 
-# NFC
-ro.nfc.port=I2C
-
 # Sensors
 persist.debug.sensors.hal=e
 debug.qualcomm.sns.daemon=e

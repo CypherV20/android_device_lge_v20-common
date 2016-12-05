@@ -129,7 +129,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     set_baseband.sh \
-		nfc_trasmit.sh \
     ueventd.qcom.rc
 
 # Display
@@ -213,17 +212,16 @@ PRODUCT_COPY_FILES += \
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    NXPNfcNci \
-    nfc_nci.pn54x.default \
+    com.nxp.nfc.nq \
+    nfc_nci.nqx.default \
+    NQNfcNci \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
     Tag
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-	  $(LOCAL_PATH)/nfc/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/nfc/etc/libnfc-nxp_dc45.conf:system/etc/libnfc-nxp_dc45.conf \
-    $(LOCAL_PATH)/nfc/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
-    $(LOCAL_PATH)/nfc/etc/nfcscc_access.xml:system/etc/nfcscc_access.xml \
-    $(LOCAL_PATH)/nfc/etc/nfcse_access.xml:system/etc/nfcse_access.xml
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # OMX
 PRODUCT_PACKAGES += \

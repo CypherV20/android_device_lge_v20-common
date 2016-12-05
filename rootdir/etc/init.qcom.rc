@@ -39,6 +39,9 @@ on init
     write /proc/sys/kernel/panic_on_oops 1
     write /proc/sys/vm/max_map_count 1000000
 
+    # NXP HAL expects /dev/nq-nci
+    symlink /dev/pn547 /dev/nq-nci
+
     # Load LGE Symbols
     export LD_SHIM_LIBS /system/lib64/libril.so|liblge.so
 
@@ -316,12 +319,6 @@ on boot
     chown system input /sys/bus/spi/devices/spi8.1/regulator_enable
     chown system input /sys/bus/spi/devices/spi8.1/wakeup_enable
 
-    # NFC
-    chmod 0666 /dev/pn544
-    chown nfc nfc /dev/pn544
-    chmod 0666 /dev/p61
-    chown spi spi /dev/p61
-
     # LEDs
     chown system system /sys/devices/virtual/lg_rgb_led/use_patterns/blink_patterns
     chmod 0644 /sys/devices/virtual/lg_rgb_led/use_patterns/blink_patterns
@@ -334,10 +331,6 @@ on boot
     write /sys/devices/virtual/lg_rgb_led/use_patterns/setting 1
 
     write /proc/sys/net/core/netdev_max_backlog 5000
-
-    # NFC
-    mkdir /data/nfc
-    mkdir /data/oemnvitems 0771 radio radio
 
 on property:sys.boot_completed=1
     write /sys/devices/virtual/lg_rgb_led/use_patterns/setting 0
