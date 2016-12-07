@@ -335,17 +335,16 @@ on boot
 on property:sys.boot_completed=1
     write /sys/devices/virtual/lg_rgb_led/use_patterns/setting 0
 
-service conn_init /system/bin/hwaddrs
+service hwaddrs /system/bin/hwaddrs
     class core
     user root
-    group system wifi
+    group system
     oneshot
 
-on property:init.svc.conn_init=stopped
-    chmod 0644 /data/misc/wifi/config
-    chown system wifi /data/misc/wifi/config
-    chmod 0644 /data/misc/bdaddr
-    chown bluetooth bluetooth /data/misc/bdaddr
+# Running hwaddrs under init is enforcing 0600, we need more
+on property:init.svc.hwaddrs=stopped
+    chmod 644 /data/misc/wifi/config
+    chmod 644 /data/misc/bluetooth/bdaddr
 
 on post-fs
     chmod 0660 /dev/lge_dm_tty0
