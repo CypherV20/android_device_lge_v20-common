@@ -43,6 +43,7 @@ ro.camera.notify_nfc=1
 # is_type: sets image stabilization type
 persist.camera.eis.enable=1
 persist.camera.is_type=4
+camera.hal1.packagelist=com.google.android.GoogleCamera,org.cyanogenmod.snap
 
 # Camera HAL1 (will revert)
 media.stagefright.legacyencoder=true
