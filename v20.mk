@@ -15,7 +15,7 @@
 #
 
 # Inherit proprietary blobs
-$(call inherit-product-if-exists, vendor/lge/g5-common/g5-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/v20-common/v20-common-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
