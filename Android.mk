@@ -95,6 +95,6 @@ $(WIDEVINE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(WIDEVINE_SYMLINKS)
 # END WIDEVINE Images
 
-include device/lge/g5-common/tftp.mk
+include device/lge/v20-common/tftp.mk
 
 endif
