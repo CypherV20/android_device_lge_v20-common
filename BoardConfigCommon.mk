@@ -196,5 +196,8 @@ WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin"
 
+# Vendor init
+TARGET_INIT_VENDOR_LIB := libinit_msm
+
 # inherit from the proprietary version
 -include vendor/lge/v20-common/BoardConfigVendor.mk
