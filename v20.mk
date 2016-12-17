@@ -107,8 +107,8 @@ PRODUCT_PACKAGES += \
     hwaddrs
 
 # Browser
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+#    Gello
 
 # Camera
 PRODUCT_PACKAGES += \
