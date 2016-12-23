@@ -102,6 +102,9 @@ BOARD_HARDWARE_CLASS += $(COMMON_PATH)/cmhw
 BOARD_USES_CYANOGEN_HARDWARE := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 
+# cmsdk
+WITHOUT_CHECK_API := true
+
 # CNE and DPM
 BOARD_USES_QCNE := true
 
