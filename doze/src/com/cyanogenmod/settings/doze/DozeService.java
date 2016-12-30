@@ -26,7 +26,7 @@ import android.util.Log;
 
 public class DozeService extends Service {
     private static final String TAG = "DozeService";
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
 
     private ProximitySensor mProximitySensor;
     private TiltSensor mTiltSensor;
@@ -55,6 +55,7 @@ public class DozeService extends Service {
         this.unregisterReceiver(mScreenStateReceiver);
         mProximitySensor.disable();
         mTiltSensor.disable();
+        onDisplayOn();
     }
 
     @Override
