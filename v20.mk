@@ -218,6 +218,12 @@ PRODUCT_PACKAGES += \
     nfc_nci.pn54x.default \
     Tag
 
+NXP_CHIP_TYPE := 2
+PRODUCT_PACKAGES += \
+    libpn548ad_fw \
+    nfc_nci.pn54x.default
+
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf

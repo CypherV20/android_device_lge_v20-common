@@ -45,6 +45,9 @@ on init
     # NXP HAL expects /dev/pn54x
     symlink /dev/pn547 /dev/pn54x
 
+    symlink /dev/pn547 /dev/pn544
+
+
     # Load LGE Symbols
     export LD_SHIM_LIBS /system/lib64/libril.so|liblge.so
 
