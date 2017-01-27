@@ -1,6 +1,6 @@
 #
-# Copyright 2016 The CyanogenMod Project
-# Copyright 2017 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,10 +15,15 @@
 # limitations under the License.
 #
 
-ifneq ($(filter v20 h918 h910 vs995 us996 ls997,$(TARGET_DEVICE)),)
+# Inherit proprietary blobs
+$(call inherit-product-if-exists, vendor/lge/v20-common/v20-common-vendor.mk)
 
-LOCAL_PATH := $(call my-dir)
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml
 
-endif
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_elsa.conf:system/etc/sensors/sensor_def_common.conf
