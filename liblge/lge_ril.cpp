@@ -16,6 +16,8 @@
 
 #include <stdlib.h>
 
+int _ZN10CneFactory23CreateCneNetworkRequestE10CnoNetTypeP27ICneNetworkObserverNotifier(CnoNetType, ICneNetworkObserverNotifier) {return 0;}
+
 #ifdef LIBLGE_64BIT
 extern "C" int _ZNK7android6Parcel10readUint64EPm(uint32_t *pArg);
 
