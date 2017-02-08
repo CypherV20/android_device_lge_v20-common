@@ -225,6 +225,7 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
+        <item>"bnep\\d"</item>
         <item>"bt-pan"</item>
     </string-array>
 
@@ -379,10 +380,6 @@
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,2097152,262144,524288,1048576</string>
-
-    <!-- Max number of advertisers supported by bluetooth controller. 0 if the
-         device does not support multiple advertisement-->
-    <integer translatable="false" name="config_bluetooth_max_advertisers">4</integer>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
