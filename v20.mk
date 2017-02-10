@@ -15,8 +15,18 @@
 # limitations under the License.
 #
 
-# inherit from common msm8996
--include device/lge/msm8996-common/BoardConfigCommon.mk
+# Inherit proprietary blobs
+$(call inherit-product-if-exists, vendor/lge/v20-common/v20-common-vendor.mk)
 
-# inherit from the proprietary version
--include vendor/lge/v20-common/BoardConfigVendor.mk
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_elsa.conf:system/etc/sensors/sensor_def_common.conf
+
+# Inherit msm8996-common
+$(call inherit-product, device/lge/msm8996-common/msm8996.mk)
