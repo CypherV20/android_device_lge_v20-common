@@ -2038,24 +2038,50 @@
     </path>
 
     <path name="speaker-fluid">
-        <ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
-        <ctl name="SLIM_0_RX Channels" value="One" />
-        <ctl name="RX INT7_1 MIX1 INP0" value="RX0" />
+        <ctl name="RX HPH Mode" value="CLS_H_LP" />
+		<ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
+		<ctl name="SLIM RX1 MUX" value="AIF_MIX1_PB" />
+        <ctl name="SLIM_0_RX Channels" value="Two" />
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+		<ctl name="RX INT7_1 MIX1 INP0" value="RX1" />
         <ctl name="SpkrLeft COMP Switch" value="1" />
         <ctl name="SpkrLeft BOOST Switch" value="1" />
         <ctl name="SpkrLeft VISENSE Switch" value="1" />
         <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
+		<ctl name="SpkrRight COMP Switch" value="1" />
+        <ctl name="SpkrRight BOOST Switch" value="1" />
+        <ctl name="SpkrRight VISENSE Switch" value="1" />
+        <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+		<ctl name="RX INT1 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="EAR PA Gain" value="G_6_DB" />
+		<ctl name="HPHL DAC Switch" value="1" />
+		<ctl name="RX7 Digital Volume" value="89" /> <!-- Here is the volume value of normal speaker. Originally it was 84 -->
+		<ctl name="RX0 Digital Volume" value="88" /> <!-- Here is the volume value of the earpiece speaker. Originally it was 84 -->
     </path>
 
     <path name="speaker-mono">
         <ctl name="SLIM_0_RX Format" value="S24_LE" />
-        <ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
-        <ctl name="SLIM_0_RX Channels" value="One" />
-        <ctl name="RX INT7_1 MIX1 INP0" value="RX0" />
+		<ctl name="RX HPH Mode" value="CLS_H_LP" />
+		<ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
+		<ctl name="SLIM RX1 MUX" value="AIF_MIX1_PB" />
+        <ctl name="SLIM_0_RX Channels" value="Two" />
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+		<ctl name="RX INT7_1 MIX1 INP0" value="RX1" />
         <ctl name="SpkrLeft COMP Switch" value="1" />
         <ctl name="SpkrLeft BOOST Switch" value="1" />
         <ctl name="SpkrLeft VISENSE Switch" value="1" />
         <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
+		<ctl name="SpkrRight COMP Switch" value="1" />
+        <ctl name="SpkrRight BOOST Switch" value="1" />
+        <ctl name="SpkrRight VISENSE Switch" value="1" />
+        <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+		<ctl name="RX INT1 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="EAR PA Gain" value="G_6_DB" />
+		<ctl name="HPHL DAC Switch" value="1" />
+		<ctl name="RX7 Digital Volume" value="89" /> <!-- Here is the volume value of normal speaker. Originally it was 84 -->
+		<ctl name="RX0 Digital Volume" value="88" /> <!-- Here is the volume value of the earpiece speaker. Originally it was 84 -->
     </path>
 
     <path name="speaker">
