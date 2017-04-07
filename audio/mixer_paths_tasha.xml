@@ -545,7 +545,6 @@
     <!-- ssr qmic end-->
     <!-- vbat related data -->
     <ctl name="GSM mode Enable" value="OFF" />
-    <ctl name="RX7 Half DB Enable" value="0" />
     <ctl name="RX INT5 VBAT LO3 VBAT Enable" value="0" />
     <ctl name="RX INT6 VBAT LO4 VBAT Enable" value="0" />
     <ctl name="RX INT7 VBAT SPKRL VBAT Enable" value="0" />
@@ -1454,9 +1453,6 @@
     <path name="incall-rec-uplink afe-proxy">
         <path name="incall-rec-uplink" />
     </path>
-    <path name="incall-rec-uplink headphones">
-        <path name="incall-rec-uplink" />
-    </path>
 
     <path name="incall-rec-uplink-compress">
         <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="1" />
@@ -1477,9 +1473,7 @@
     <path name="incall-rec-uplink-compress afe-proxy">
         <path name="incall-rec-uplink-compress" />
     </path>
-    <path name="incall-rec-uplink-compress headphones">
-        <path name="incall-rec-uplink-compress" />
-    </path>
+
     <path name="incall-rec-downlink">
         <ctl name="MultiMedia1 Mixer VOC_REC_DL"  value="1" />
     </path>
@@ -1499,9 +1493,7 @@
     <path name="incall-rec-downlink afe-proxy">
         <path name="incall-rec-downlink" />
     </path>
-    <path name="incall-rec-downlink headphones">
-        <path name="incall-rec-downlink" />
-    </path>
+
     <path name="incall-rec-downlink-compress">
         <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="1" />
     </path>
@@ -1521,9 +1513,7 @@
     <path name="incall-rec-downlink-compress afe-proxy">
         <path name="incall-rec-downlink-compress" />
     </path>
-    <path name="incall-rec-downlink-compress headphones">
-        <path name="incall-rec-downlink-compress" />
-    </path>
+
     <path name="incall-rec-uplink-and-downlink">
         <path name="incall-rec-uplink" />
         <path name="incall-rec-downlink" />
@@ -1542,9 +1532,6 @@
     </path>
 
     <path name="incall-rec-uplink-and-downlink afe-proxy">
-        <path name="incall-rec-uplink-and-downlink" />
-    </path>
-    <path name="incall-rec-uplink-and-downlink headphones">
         <path name="incall-rec-uplink-and-downlink" />
     </path>
 
@@ -1568,9 +1555,7 @@
     <path name="incall-rec-uplink-and-downlink-compress afe-proxy">
         <path name="incall-rec-uplink-and-downlink-compress" />
     </path>
-    <path name="incall-rec-uplink-and-downlink-compress headphones">
-        <path name="incall-rec-uplink-and-downlink-compress" />
-    </path>
+
     <path name="hfp-sco">
         <ctl name="HFP_PRI_AUX_UL_HL Switch" value="1" />
         <ctl name="SLIMBUS_0_RX Port Mixer AUX_PCM_UL_TX" value="1" />
@@ -2114,8 +2099,6 @@
         <path name="speaker-mono" />
         <ctl name="VI_FEED_TX Channels" value="One" />
         <ctl name="SLIM0_RX_VI_FB_LCH_MUX"  value="SLIM4_TX" />
-        <ctl name="RX7 Digital Volume" value="83" />
-        <ctl name="RX7 Half DB Enable" value="1" />
     </path>
 
     <path name="voice-speaker-protected">
@@ -2961,9 +2944,6 @@
         <path name="incall-music" />
     </path>
 
-    <path name="incall-music headphones">
-        <path name="incall-music" />
-    </path>
     <path name="incall_music_uplink">
         <ctl name="Incall_Music Audio Mixer MultiMedia2" value="1" />
     </path>
@@ -2988,9 +2968,6 @@
         <path name="incall_music_uplink" />
     </path>
 
-    <path name="incall_music_uplink headphones">
-        <path name="incall_music_uplink" />
-    </path>
     <path name="incall_music_uplink2">
         <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="1" />
     </path>
@@ -3014,9 +2991,7 @@
     <path name="incall_music_uplink2 hdmi">
         <path name="incall_music_uplink2" />
     </path>
-    <path name="incall_music_uplink2 headphones">
-        <path name="incall_music_uplink2" />
-    </path>
+
 <!-- voice chat for music share begins -->
     <path name="voice-chat">
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia2" value="1" />
@@ -3036,51 +3011,51 @@
 
     <!-- SEC MI2S HEADPHONE begins -->
 
-    <path name="audio-ull-playback headphones tert-mi2s-headphones">
+    <path name="audio-ull-playback tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia3" value="1" />
     </path>
 
-    <path name="deep-buffer-playback headphones tert-mi2s-headphones">
+    <path name="deep-buffer-playback tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
-    <path name="low-latency-playback headphones tert-mi2s-headphones">
+    <path name="low-latency-playback tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
 
-    <path name="compress-offload-playback headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
-    <path name="compress-offload-playback2 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback2 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia7" value="1" />
     </path>
 
-    <path name="compress-offload-playback3 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback3 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia10" value="1" />
     </path>
 
-    <path name="compress-offload-playback4 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback4 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia11" value="1" />
     </path>
 
-    <path name="compress-offload-playback5 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback5 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia12" value="1" />
     </path>
 
-    <path name="compress-offload-playback6 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback6 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia13" value="1" />
     </path>
 
-    <path name="compress-offload-playback7 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback7 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia14" value="1" />
     </path>
 
-    <path name="compress-offload-playback8 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback8 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia15" value="1" />
     </path>
 
-    <path name="compress-offload-playback9 headphones tert-mi2s-headphones">
+    <path name="compress-offload-playback9 tert-mi2s-headphones">
         <ctl name="SEC_MI2S_RX Audio Mixer MultiMedia16" value="1" />
     </path>
     <!-- SEC MI2S HEADPHONE ends -->
@@ -3089,20 +3064,6 @@
         <ctl name="SEC_TDM_RX_0 Audio Mixer MultiMedia1" value="1" />
         <ctl name="SEC_TDM_RX_0 Data Format" value="Gen-Compr" />
     </path>
-
-    <path name="incall-music headphones tert-mi2s-headphones">
-        <ctl name="Incall_Music Audio Mixer MultiMedia1" value="1" />
-    </path>
-
-    <path name="incall_music_uplink headphones tert-mi2s-headphones">
-        <ctl name="Incall_Music Audio Mixer MultiMedia2" value="1" />
-    </path>
-
-    <path name="incall_music_uplink2 headphones tert-mi2s-headphones">
-        <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="1" />
-    </path>
-
-    <!-- SEC MI2S HEADPHONE ends -->
 
 <!-- These are LG actual sound device specific mixer settings -->
 <!-- LG RX device -->
