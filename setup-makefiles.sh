@@ -21,9 +21,9 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-EMOTION_ROOT="$MY_DIR"/../../..
+CM_ROOT="$MY_DIR"/../../..
 
-HELPER="$EMOTION_ROOT"/vendor/emotion/build/tools/extract_utils.sh
+HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -31,10 +31,10 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$EMOTION_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 # Copyright headers and common guards
-write_headers "v20 h910 h910 us996 vs995 ls997"
+write_headers "v20 h910 h910 us996 vs995 ls997 elsa"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
@@ -70,7 +70,7 @@ echo "endif" >> "$ANDROIDMK"
 write_footers
 
 # Reinitialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$EMOTION_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
 # Copyright headers and guards
 write_headers
